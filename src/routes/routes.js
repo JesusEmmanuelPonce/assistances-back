@@ -8,5 +8,7 @@ module.exports = function(){
 
     router.post('/teachers', controllers.addTeacher);
 
+    router.get('/teachers', controllers.showTeachers);
+
     return router;
 }
