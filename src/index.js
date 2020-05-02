@@ -1,6 +1,7 @@
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const app = express();
+const routes = require('./routes/routes');
 const cors = require('cors');
 
 //Connect mongoose
@@ -18,6 +19,9 @@ app.set('port', process.env.PORT || 3001);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+//Routes
+app.use('/', routes());
 
 app.listen(app.get('port'), () =>{
     console.log('On port', app.get('port'));
