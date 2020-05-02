@@ -11,3 +11,19 @@ exports.home = (req, res) => {
 		});
 	}
 }
+
+//Add teacher
+exports.addTeacher = async(req, res, next) => {
+    const teachers = new Teachers(req.body);
+    try {
+        await teachers.save();
+        res.json({
+			msg: 'Teacher added'
+		});
+    } catch (e) {
+        console.log(e);
+		res.status(500).json({
+			message: 'internal server error :('
+		});
+    }
+}
