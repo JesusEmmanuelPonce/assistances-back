@@ -10,5 +10,7 @@ module.exports = function(){
 
     router.get('/teachers', controllers.showTeachers);
 
+    router.post('/entries', controllers.addEntry);
+
     return router;
 }
