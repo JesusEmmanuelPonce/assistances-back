@@ -15,10 +15,6 @@ const teachers = new Schema({
         trim: true,
         unique: true
     },
-    entry:{
-        type: String,
-        trim: true
-    },
     status:{
         type: Boolean
     }
