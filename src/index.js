@@ -6,7 +6,7 @@ const cors = require('cors');
 
 //Connect mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/assistences', {
+mongoose.connect('mongodb://localhost/assistances', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true 
