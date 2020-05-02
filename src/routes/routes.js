@@ -12,5 +12,7 @@ module.exports = function(){
 
     router.post('/entries', controllers.addEntry);
 
+    router.get('/entries', controllers.showEntries);
+
     return router;
 }

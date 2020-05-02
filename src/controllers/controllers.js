@@ -55,3 +55,16 @@ exports.addEntry = async(req, res) => {
 		});
     }
 }
+
+//Show all teachers
+exports.showEntries = async(req, res) => {
+    try {
+        const entries = await Entries.find({}).populate('teacher');
+        res.json(entries)
+    } catch (e) {
+        console.log(e);
+		res.status(500).json({
+			message: 'internal server error :('
+		});   
+    }
+}
