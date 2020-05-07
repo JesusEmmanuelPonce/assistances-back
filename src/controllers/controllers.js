@@ -4,7 +4,7 @@ const Entries = require('../models/entries');
 //Home
 exports.home = (req, res) => {
     try{
-		res.send('API make by Jesus Ponce');
+		res.send('API made by Jesus Ponce');
 	}catch (e) {
 		console.log(e);
 		res.status(500).json({
