@@ -6,12 +6,16 @@ module.exports = function(){
 
     router.get('/', controllers.home);
 
+    //Add teacher
     router.post('/teachers', controllers.addTeacher);
 
+    //Show teacher
     router.get('/teachers', controllers.showTeachers);
 
+    //Add entries
     router.post('/entries', controllers.addEntry);
 
+    //Mostrar entries
     router.get('/entries', controllers.showEntries);
 
     return router;
