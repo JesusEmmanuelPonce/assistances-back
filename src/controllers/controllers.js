@@ -44,31 +44,8 @@ exports.showTeachers = async(req, res) => {
 
 //Add new entry
 exports.addEntry = async (req, res, next) => {
-
-    const event = new Date();
-    let h = event.getHours();
-    let m = event.getMinutes();
-    let s = event.getSeconds();
-    let day = event.getDate();
-    let month = event.getMonth() + 1;
-    const year = event.getFullYear();
-    const hour = h + ':' + m + ':' + s;
-        if(h < 10) {
-            h = '0' + h
-        }
-        if(m < 10) {
-            m = '0' + m
-        }
-        if(s < 10) {
-            s = '0' + s 
-        }
     
-    const entries = new Entries({
-        day,
-        month,
-        year,
-        hour
-    });
+    const entries = new Entries(req.body);
     try {
         await entries.save();
         res.json({msg : 'entry registered'});
