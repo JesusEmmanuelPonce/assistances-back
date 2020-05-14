@@ -10,13 +10,9 @@ const teachers = new Schema({
         type: String,
         trim: true
     },
-    code:{
+    status:{
         type: String,
         trim: true,
-        unique: true
-    },
-    status:{
-        type: Boolean
     }
 })
 

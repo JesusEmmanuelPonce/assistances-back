@@ -51,8 +51,8 @@ exports.addEntry = async (req, res, next) => {
         res.json({msg : 'entry registered'});
     } catch (e) {
         console.log(e);
-		res.status(500).json({
-			message: 'internal server error :('
+		res.json({
+			message: 'No existe el ID'
     	});
     }
 }
