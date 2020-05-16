@@ -12,6 +12,9 @@ module.exports = function(){
     //Show teacher
     router.get('/teachers', controllers.showTeachers);
 
+    //Delete teacher
+    router.delete('/teachers/:id', controllers.deleteTeachers);
+
     //Add entries
     router.post('/entries', controllers.addEntry);
 

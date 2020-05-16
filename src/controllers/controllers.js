@@ -42,6 +42,19 @@ exports.showTeachers = async(req, res) => {
     }
 }
 
+//Delete teacher with ID
+exports.deleteTeachers = async(req, res) => {
+    try {
+        await Teachers.findOneAndDelete({_id : req.params.id});
+        res.json({msg: 'Profesor eliminado'})
+    } catch (e) {
+        console.log(e);
+		res.status(500).json({
+			message: 'internal server error :('
+		});
+    }
+}
+
 //Add new entry
 exports.addEntry = async (req, res, next) => {
     
