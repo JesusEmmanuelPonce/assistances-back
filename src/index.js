@@ -6,7 +6,7 @@ const cors = require('cors');
 
 //Connect mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/assistances', {
+mongoose.connect('mongodb://assistances:yisus123@ds131814.mlab.com:31814/heroku_5nsjk69r', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true 
